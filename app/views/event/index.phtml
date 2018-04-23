@@ -1,0 +1,27 @@
+
+
+<div class="container" style="padding-top: 50px;"> 
+<a href="event/addevent" class="btn btn-info" > Add </a>
+<p><p>
+    <table class="table table-striped " style="background-color: white; color:black;">
+    <thead>
+        <tr>
+        <th scope="col">ลำดับ</th>
+        <th scope="col">ชื่อกิจกรรม</th>
+        <th scope="col">วันที่</th>
+        </tr>
+    </thead>
+    <tbody>
+        <?php foreach ($event as $event) {
+            echo '<tr><th>'.$event->id
+            .'</th><td>'.$event->eventname
+            .'</td><td>'.$event->eventdate
+            .'</td><td>';
+
+            echo "<a href='event/editevent/$event->id' class='btn btn-primary'> edit </a>
+            </td><td>
+            <a href='event/deleteevent/$event->id' class='btn btn-danger'> Delete </a>";
+        }?>
+    </tbody>
+    </table>
+</div>

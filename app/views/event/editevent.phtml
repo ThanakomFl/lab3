@@ -1,0 +1,37 @@
+<div class="row">
+    <div class="col-sm">     
+    </div>
+    <div class="col-sm">
+  <form action="" method="post"  enctype="multipart/form-data"  >
+  <input type="hidden"  name="profileId"  value="<?php echo $event->id;?>">
+  <div class="form-group">
+    <label>ชื่อกิจกรรม</label>
+    <input  name="eventname" class="form-control" id="eventname" value="<?php echo $event->eventname?>"  required >
+  </div>
+  <div class="form-group">
+    <label>วันที่</label>
+    <input type="date" name="eventdate" class="form-control" id="eventdate" value="<?php echo $event->eventdate?>"  min="2018-01-01" max="2019-12-31"  required>
+  </div>
+  <div class="form-group">
+    <label>รายละเอียด</label>
+    <textarea type="text" name="eventdetail" class="form-control" id="eventdetail" rows="5" required> <?php echo $event->eventdetail?></textarea>
+  </div> 
+  <div class="form-group">
+    <label>ภาพกิจกรรม</label>
+    <div class="custom-file">
+          <input type="file" name="eventpicture" id="eventpicture" class="custom-file-input"  >
+          <label class="custom-file-label" >Choose file</label>
+    </div>
+  </div>
+  <?php if($event->eventpicture!=''){?>
+   <div class="form-group">  
+          <img style="width:100px; height:100px" src="<?php echo $this->url->getBaseUri().'public/img/'.$event->eventpicture; ?>">
+  </div>
+  <?php }?>
+  <button type="submit" class="btn btn-info">Submit</button>
+  <a href="<?php echo $this->url->getBaseUri(); ?>" class="btn btn-warning">Back</a>
+</form>
+    </div>
+    <div class="col-sm">     
+    </div>
+  </div>

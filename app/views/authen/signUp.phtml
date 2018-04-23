@@ -1,0 +1,30 @@
+
+<link rel="stylesheet" href="../css/style.css">
+
+
+ <div class="wrapper fadeInDown">
+ <div id="formContent">
+   <!-- Tabs Titles -->
+   <h2 class="active"> SignUp </h2>
+
+   <!-- Icon -->
+   <div class="fadeIn first">
+     <img src="http://danielzawadzki.com/codepen/01/icon.svg" id="icon" alt="User Icon" />
+   </div>
+
+   <!-- Login Form -->
+   <form action="" method="post">
+   <input type="hidden"  name="profileId"  value="<?php echo $profile->id;?>">
+     <input type="text" name="email" id="login" class="fadeIn second"  placeholder="Enter Email"  required>
+     <input style="-webkit-text-security:square;" type="text" name="password" id="password" class="fadeIn third" name="password" placeholder="Password"  required>
+     <input type="text" name="firstname" id="firstname" class="fadeIn third" name="password" placeholder="Firstname"  required>
+     <input type="submit" class="fadeIn fourth" value="Submit">
+   </form>
+
+   <!-- Remind Passowrd -->
+   <div id="formFooter">
+     <a href="<?php echo $this->url->getBaseUri(); ?>" class="underlineHover">Back</a>
+   </div>
+
+ </div>
+</div>
